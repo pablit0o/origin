@@ -56,7 +56,7 @@ if __name__ == '__main__':
     https://mathgenealogy.org:8000/api/v2/MGP/graph/edges/
     """
 
-    # [FN1]
+    # [1*]
     authdata = getlogin()
     token = login(authdata)
     endpoint = '/api/v2/MGP/acad/all'
@@ -64,11 +64,18 @@ if __name__ == '__main__':
     # as of 22/06/2026: 346140 IDs
     ID_all = doquery(endpoint,token,params='')
     endpoint = '/api/v2/MGP/acad'
+    
+    with open(DATA,'a') as file:
+        file.write('[\n')
 
-    # o(n) but takes a long time [2*]
-    for ID in ID_all:
+    # # o(n) but takes a long time [2*]
+    for ID in ID_all[63614:]:
         querydata = {"id" : str(ID)}
-        info = json.dumps(doquery(endpoint,token,querydata))
 
+        # Had to brute force impl but works
         with open(DATA,'a') as file:
-            file.write(info + '\n')
+            json.dump(doquery(endpoint,token,querydata),file)
+            if ID != ID_all[-1]:
+                file.write(',\n')
+            else:
+                file.write('\n]')
