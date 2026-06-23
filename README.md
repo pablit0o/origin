@@ -19,7 +19,7 @@ The IEEE-style references are denoted as [X], while footnotes are denoted [X*].
 ## Footnotes
 [1*] The MGP API can obscurely be accessed through [1] and going over to the 'Contact Us' page. By selecting 'Request access to data for research purposes', you will be redirected to their API. The code can be found when creating an account and downloading
 their sample python script.  
-[2*] The mgp_data.json has data queried from the MGP API on 22/06/2026. It contains xxx,xxx entries and took roughly +20m .. RuntimeError at entry 10330, 21299, 28143, 40223
+[2*] The mgp_data.json has data queried from the MGP API on 22/06/2026. It contains xxx,xxx entries and took roughly ~13:52 CURR .. RuntimeError at entry 10330, 21299, 28143, 40223, 63616
 
 ## References
 [1] Mathematics Genealogy Project, "Mathematics Genealogy Project" [Online]. Available: https://www.genealogy.math.ndsu.nodak.edu/. [Accessed: Jun. 22, 2026].  

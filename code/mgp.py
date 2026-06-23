@@ -64,7 +64,7 @@ if __name__ == '__main__':
     # as of 22/06/2026: 346140 IDs
     ID_all = doquery(endpoint,token,params='')
     endpoint = '/api/v2/MGP/acad'
-    
+
     with open(DATA,'a') as file:
         file.write('[\n')
 
